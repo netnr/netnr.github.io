@@ -9,29 +9,28 @@
     <title>netnr</title>
 
     <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+</head>
 
+<body style="margin:0;padding:0;">
     <!--主题响应-->
     <script>
         if (document.cookie.includes(".theme=dark")) {
+            Object.assign(document.body.style, { backgroundColor: '#212529', color: '#adb5bd' });
             let domHtml = document.documentElement;
             domHtml.dataset.bsTheme = "dark";
             domHtml.className = domHtml.className.replace('light', 'dark');
         }
     </script>
-</head>
 
-<body>
     <!--Menu-->
-    <nav class="app-nav">
-        <ul>
-            <li><a class="flag-theme" title="Theme"></a></li>
-        </ul>
+    <nav class="app-nav" style="display:none;">
+        <ul><li><a class="flag-theme" title="Theme"></a></li></ul>
     </nav>
 
     <!--Main-->
-    <div id="app">Loading ...</div>
+    <div id="app" style="margin:1em;font-size:1.2em;opacity:.8;">Loading ...</div>
 
-    <link rel="stylesheet" href="static/docsify-better/docsify-better.css?1.0.1" />
+    <link rel="stylesheet" href="static/docsify-better/docsify-better.css?1.0.2" />
 
     <script>
         window.$docsify = {
@@ -103,7 +102,7 @@
         };
     </script>
 
-    <script src="static/docsify-better/docsify-better.js?1.0.1"></script>
+    <script src="static/docsify-better/docsify-better.js?1.0.2"></script>
 </body>
 
 </html>
