@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" class="netnrmd-light">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="netnr,NET牛人" />
+    <meta name="description" content="netnr,NET牛人,Netnr Project">
+
+    <title>netnr</title>
+
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+
+    <!--主题响应-->
+    <script>
+        if (document.cookie.includes(".theme=dark")) {
+            let domHtml = document.documentElement;
+            domHtml.dataset.bsTheme = "dark";
+            domHtml.className = domHtml.className.replace('light', 'dark');
+        }
+    </script>
+</head>
+
+<body>
+    <!--Menu-->
+    <nav class="app-nav">
+        <ul>
+            <li><a class="flag-theme" title="Theme"></a></li>
+        </ul>
+    </nav>
+
+    <!--Main-->
+    <div id="app">Loading ...</div>
+
+    <link rel="stylesheet" href="static/docsify-better/docsify-better.css?1.0.1" />
+
+    <script>
+        window.$docsify = {
+            repo: 'netnr',
+            noEmoji: true,
+            auto2top: true,
+            loadSidebar: true,
+            relativePath: true,
+            routerMode: "history",
+            markdown: {
+                renderer: {
+                    code: function (str, lang) {
+                        let htm = hljs.getLanguage(lang)
+                            ? hljs.highlight(str, { language: lang }).value
+                            : hljs.highlightAuto(str).value;
+                        return `<pre><code>${htm}</code></pre>`;
+                    }
+                }
+            },
+            plugins: [
+                function (hook) {
+                    // 每次开始解析 Markdown 内容时调用
+                    hook.beforeEach(function (content) {
+                        let domMain = document.getElementById("main");
+                        domMain.classList.add("markdown-body");
+
+                        return content;
+                    });
+
+                    // 每次路由切换时数据全部加载完成后调用
+                    hook.doneEach(function () {
+                        let domMain = document.getElementById("main");
+                        let domContent = domMain.parentNode;
+                        let domToc = domContent.querySelector(".toc");
+                        if (!domToc) {
+                            domToc = document.createElement("div");
+                            domToc.className = "toc";
+                            domContent.appendChild(domToc);
+                        }
+                        domToc.innerHTML = "";
+
+                        tocbot.init({
+                            tocElement: domToc,
+                            contentElement: domMain,
+                            headingSelector: 'h3, h4, h5, h6'
+                        });
+
+                        let toclink = domToc.querySelectorAll('a');
+                        if (toclink.length) {
+                            toclink.forEach(item => {
+                                item.title = item.innerText;
+                                item.dataset.href = item.getAttribute('href');
+                                item.onclick = function () {
+                                    item.href = `${location.pathname}?id=${decodeURIComponent(item.hash).substring(1)}`;
+
+                                    setTimeout(() => { item.href = item.dataset.href }, 100);
+                                }
+                            })
+                        }
+
+                        if (toclink.length < 2 || document.body.scrollHeight - document.documentElement.clientHeight < 200) {
+                            domToc.style.transform = "translateY(-100vh)";
+                        } else {
+                            domToc.style.transform = "";
+                        }
+                    });
+                }
+            ]
+        };
+    </script>
+
+    <script src="static/docsify-better/docsify-better.js?1.0.1"></script>
+</body>
+
+</html>
