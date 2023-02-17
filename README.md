@@ -50,7 +50,7 @@ netnr@netnr.com
 
 [Sponsor list](SPONSORS.md)
 
-[扫码进群](https://s1.netnr.com/tmp/weixin_group.jpg)
+[扫码进群](https://ss.netnr.com/tmp/weixin_group.jpg)
 
 
 ### Up
