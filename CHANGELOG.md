@@ -1,11 +1,11 @@
 # Change Log
 
-### 2023-06
+### 2023-04
 - 升级 个站前端去除 shoelace-style 组件库，因为 bootstrap-5.3 已经开始支持暗黑主题，使用 webpack 打包
+- 升级 .NET 7.0.5
 - 删除 站点对象存储接入（使用次数较少）
-
-### 2022-09
-- 调整 npm 资源为自建代理，仅限白名单包名访问
+- 删除 Gist 同步
+- 优化 DbHelper 为 DbKit 并为异步读取数据，DataKit 依赖为 DbKit
 
 ### 2022-08
 - 调整 Newtonsoft.Json 组件为 System.Text.Json

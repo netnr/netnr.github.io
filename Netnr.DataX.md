@@ -4,59 +4,60 @@ Database import and export, migration, full-text search, common tool integration
 
 https://github.com/netnr/np/releases
 
-### Data -> 数据
- - Full Text Search -> 全文检索
- - Execute SQL -> 执行 SQL
- - Generate Table DDL -> 生成 DDL
- - Generate Column Mapping -> 生成 列映射(读=>写)
- - Generate Table Mapping -> 生成 表映射(读=>写)
- - Excel Import -> Excel 导入
- - Excel Export -> Excel 导出
- - Data Migrate -> 数据迁移
- - Data Import -> 数据导入
- - Data Export -> 数据导出
- - Parameter Optimization (SQLite MySQL) -> 参数优化
- - Connection Test -> 连接测试
-
-### Silent -> 静默
-- scopy (Safe Copy) -> 安全拷贝
-- npmi (npm install no deps) -> npm 安装不含依赖包
-- clearmemory (Clear Memory) -> 清理内存（仅限 Windows）
-- aes (AES encryption and decryption) -> AES加密解密
-- ddel (deep delete) -> 深度删除指定文件
-- tec (Text encoding conversion) -> 文本编码转换
-- base64 (Base64) -> Base64编码解码
-- hash (File HASH) -> HASH计算
-- ocr (OCR) -> 识别图片文字, 默认Windows截图
-- snow (Generate Snowflake) -> 生成雪花ID
-- uuid (Generate UUID) -> 生成UUID
-- sming (System Monitor) -> 系统监控
-- ss (System Information) -> 系统信息
-- serve (Serve) -> 启动服务
-- dni (Domain Name Information) -> 域名信息查询（合集）
-- ssl (SSL) -> 证书信息
-- icp (ICP) -> ICP查询
-- ip (IP) -> IP查询
-- whois (Whois) -> Whois查询
-- dns (DNS Resolve) -> DNS解析
-- traceroute (Trace Route) -> 路由追踪
-- devicescan (Device Scan) -> 设备扫描
-- tcpscan (TCP Port Scan) -> TCP端口扫描（1-65535）
-- tcping (TCP Port Probing) -> TCP端口探测
-- work (Work) -> 作业, 以 Work_ 开头
-
-### Mix -> 综合
-- Set environment variables -> 设置环境变量
-- Open the hub directory -> 打开 hub 目录
-- GC -> 清理
-- Console encoding -> 控制台编码
-- Check for updates -> 检查更新
-- View version -> 查看版本
+### Menu 菜单
+```
+[About] Exit 退出
+[About] <version> View version 查看版本
+[About] Check for update 检查更新
+[About] GC 清理
+[About] Console encoding 控制台编码
+[About] <hub> Open the hub directory 打开 hub 目录
+[Data] <work> Work 作业, 以 Work_ 开头
+[Data] Migrate Data 迁移数据
+[Data] Export Data 导出数据
+[Data] Import Data 导入数据
+[Data] Export Excel 导出 Excel
+[Data] Import Excel 导入 Excel
+[Data] Generate Table Mapping 生成 表映射(读=>写)
+[Data] Generate Column Mapping 生成 列映射(读=>写)
+[Data] Generate Table DDL 生成 DDL
+[Data] <conntest> Connection Test 连接测试
+[Data] Parameter Optimization (SQLite MySQL) 参数优化
+[Data] Execute SQL 执行 SQL
+[Data] Full Text Search 全文检索
+[Network] <tcping> TCPing TCP 端口探测
+[Network] <tcpscan> TCP Scan TCP端口扫描（1-65535）
+[Network] <devicescan> Device Scan 设备扫描
+[Network] <traceroute> Trace Route 路由追踪
+[Network] <whois> Whois Whois查询
+[Network] <dns> DNS Resolve DNS解析
+[Network] <ip> IP IP查询
+[Network] <icp> ICP ICP查询
+[Network] <ssl> SSL 证书信息
+[Network] <dni> Domain Name Information 域名信息查询（合集）
+[Network] <serve> Serve 启动服务
+[Tool] <sinfo> System Info 系统信息
+[Tool] <sming> System Monitor 系统监控
+[Tool] <hinfo> Hardware Info 硬件信息
+[Tool] <pinfo> Process Info 程序信息
+[Tool] <consume> Consume 消耗
+[Tool] <clearmemory> Clear Memory 清理内存（仅限 Windows）
+[Tool] <pipe> Pipeline 管道工具
+[Tool] <env> Environment variables 环境变量
+[Tool] <uuid> Generate UUID 生成UUID
+[Tool] <snow> Generate Snowflake 生成雪花ID
+[Tool] <tail> Tail 读取文件最新内容
+[Tool] <textmining> Text Mining 文本挖掘
+[Tool] <ddel> deep delete 深度删除匹配的文件（夹）
+[Tool] <gitpull> Git Pull 批量拉取
+[Tool] <cryptoconn> Crypto Conn 连接字符串加密解密
+```
 
 ### Q&A
 - 支持 SQLite、MySQL、Oracle、SQLServer、PostgreSQL
 - 配置文件 ud/config.json，默认输出目录 ud/hub，日志输出目录 logs
 - 数据库连接信息 ConnectionRemark 为连接别名，作业连接引用，所以保持唯一
+- `<xxx>` 代表支持静默运行，如 `ndx version`、`ndx tcping zme.ink`
 - 静默作业
   - 参数配置参考 Works.Work_Demo 示例，建议保留示例新建作业
   - 不在示例的方法不支持静默执行，作业名以 Task_ 开头
@@ -77,7 +78,7 @@ https://github.com/netnr/np/releases
   - 参数查询 `SHOW VARIABLES like 'local_infile'`
 - SQLServer
   - SqlClient 需要 ICU 环境
-  - 版本 5.0.0 发布时剪裁粒度改为 `<TrimMode>copyused</TrimMode>`
 - Linux 关闭全球化运行 System.Globalization.Invariant
   - Couldn't find a valid ICU package installed on the system
-  - 设置环境变量 `export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1`
+  - 安装 `yum install icu` （推荐）
+  - 或设置环境变量 `export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1`
