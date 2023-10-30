@@ -1,6 +1,6 @@
 # NS (Netnr.Serve)
-简单 WEB 服务  
-Simple Web Service
+简单的 HTTP 服务，文件列表、下载、上传、删除，支持 mp4 分片播放  
+Simple HTTP service, file list, download, upload, delete, supports mp4 segment playback
 
 https://github.com/netnr/np/releases
 
