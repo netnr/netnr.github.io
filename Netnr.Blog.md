@@ -18,7 +18,6 @@
 - MailKit（邮箱验证）
 - Netnr.Core（公共类库）
 - Netnr.Login（第三方登录）
-- Netnr.WeChat（微信公众号）
 - Netnr.UAParser（UserAgent 解析爬虫、浏览器）
 
 ### 功能模块

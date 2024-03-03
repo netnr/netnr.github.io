@@ -13,13 +13,18 @@ netnr@netnr.com
 &nbsp; https://www.netnr.com
 &nbsp; https://netnr.zme.ink
 
-**Proxy**
-&nbsp; 跨域请求
-&nbsp; https://cors.eu.org
-
 **KMS**
 &nbsp; KMS 激活服务，slmgr 命令激活 Windows 系统、Office
 &nbsp; https://kms.zme.ink
+
+**Proxy**
+&nbsp; 跨域请求
+&nbsp; https://cors.eu.org
+&nbsp; https://seep.eu.org
+
+**localhost**
+&nbsp; 支持 HTTPS (SSL) 和子域的 localhost
+&nbsp; https://seep.eu.org/localhost
 
 **uuid**
 &nbsp; 一个基于 Git 托管去中心化的收藏夹，书签
