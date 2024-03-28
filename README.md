@@ -49,6 +49,8 @@ netnr@netnr.com
 
 ### Sponsors
 支付宝 微信  
+> 2024-03-28，C*c 兄弟，你在打赏里面留言不留联系方式，我怎么回你，还有你为什么不给我发邮件。
+
 <img src="static/donate/alipay.svg" title="支付宝" height="240" />
 <img src="static/donate/wechat.svg" title="微信" height="240" />
 
