@@ -1,6 +1,6 @@
 # Netnr
 周华，男，1992.7 生，2012 参工，大专，single 🤣  
-netnr@netnr.com  
+✉ netnr@netnr.com  
 .NET、SQL、JavaScript
 
 
@@ -48,11 +48,10 @@ netnr@netnr.com
 
 
 ### Sponsors
-支付宝 微信  
-> 2024-03-28，C*c 兄弟，你在打赏里面留言不留联系方式，我怎么回你，还有你为什么不给我发邮件。
+支付宝 和 微信（账号：`net-nr`）  
 
 <img src="static/donate/alipay.svg" title="支付宝" height="240" />
-<img src="static/donate/wechat.svg" title="微信" height="240" />
+<img src="static/donate/wechat.svg" title="微信，微信账号：net-nr" height="240" />
 
 [Sponsor list](SPONSORS.md)
 

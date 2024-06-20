@@ -1,5 +1,8 @@
 # Change Log
 
+### 2024-06
+- 升级 .NET 7.0.20 , 暂时保持 .NET 7 版本，因为 .NET 8 Linux 依赖 GLIBCXX_3.4.21 ，CentOS 7 不支持
+
 ### 2023-10
 - 升级 .NET 7.0.13
 

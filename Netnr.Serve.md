@@ -5,7 +5,7 @@ Simple HTTP static file serving
 ### Start (启动)
 启动逐个参数设置
 ```bat
---urls (default: http://*:713/):
+--urls (default: http://*:7713/):
 --root (default: D:/site): #根目录，默认命令行启动位置
 --index (default: index.html):
 --404 (default: 404.html):
@@ -18,35 +18,35 @@ Simple HTTP static file serving
 
 静默带参启动
 ```bat
-ns --urls http://*:713/ --readonly true
+ns --urls http://*:7713/ --readonly true
 ```
 
 ### List (列表)
 ```bash
-curl http://localhost:713/ #列表，默认浏览器 FTP，curl 友好
-curl http://localhost:713/-u user:pass #带授权
+curl http://localhost:7713/ #列表，默认浏览器 FTP，curl 友好
+curl http://localhost:7713/-u user:pass #带授权
 
-(iwr http://localhost:713/).content #PowerShell
+(iwr http://localhost:7713/).content #PowerShell
 ```
 ### Download (下载)
 ```bash
-curl http://localhost:713//file.exe -O
-curl http://localhost:713/dir/?zip #下载文件夹，不压缩打包目录并实时输出流
+curl http://localhost:7713//file.exe -O
+curl http://localhost:7713/dir/?zip #下载文件夹，不压缩打包目录并实时输出流
 
-iwr http://localhost:713//file.exe -outfile file.exe #PowerShell
+iwr http://localhost:7713//file.exe -outfile file.exe #PowerShell
 ```
 ### Upload (上传)
 ```bash
-curl http://localhost:713/-T file.ext #上传文件
-curl http://localhost:713/dir/rename.ext -T file.ext #自定义路径上传
+curl http://localhost:7713/-T file.ext #上传文件
+curl http://localhost:7713/dir/rename.ext -T file.ext #自定义路径上传
 
-iwr http://localhost:713/dir/rename.ext -method put -infile file.ext
+iwr http://localhost:7713/dir/rename.ext -method put -infile file.ext
 ```
 ### Delete (删除)
 ```bash
-curl http://localhost:713/file.ext -X delete #删除
+curl http://localhost:7713/file.ext -X delete #删除
 
-iwr http://localhost:713/file.ext -method delete #PowerShell
+iwr http://localhost:7713/file.ext -method delete #PowerShell
 ```
 
 ### Release (发布)
