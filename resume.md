@@ -10,10 +10,10 @@ ASP.NET、SQL、JavaScript
 时间：2018.08 ~ 2024.08  
 职位：全栈  
 - 开发和运维，涉及到的有：
-- ASP.NET MVC（.NET 7+）、EFCore
+- ASP.NET MVC（.NET 7+）、EFCore、LINQ
 - SQLite、MySQL、PolarDB、Appache Doris、SQLServer、Oracle、PostgreSQL、Dm、DuckDB、ClickHouse
-- linux（x64、arm64）、nginx、acme.sh SSL、shell + cron、docker
-- es6、webpack、bootstrap、shoelace、AG-Grid、Lit、Service workers (offline)
+- Linux（X64、ARM64）、nginx、acme.sh SSL、shell + Cron、Docker
+- ES6、webpack、Bootstrap、Shoelace、AG-Grid、Lit、Service workers (offline)
 - 监控主机、接口、端口、SSL证书、数据库
 
 #### 北京航星
