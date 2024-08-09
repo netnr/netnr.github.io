@@ -86,3 +86,6 @@ Install-Package Netnr.Login
 ### 使用
 - v4 旧版本使用示例 `Netnr.Demo/Controllers/LoginController.cs`
 - 新版本使用示例 `Netnr.Demo/Controllers/AccountController.cs`
+
+### 注意
+- 默认构建的授权调整链接是基于 PC，而有些是区分移动端、扫码等，需要根据客户端来源构建对应的授权跳转链接。
