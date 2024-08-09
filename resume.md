@@ -11,7 +11,8 @@ ASP.NET、SQL、JavaScript
 职位：全栈  
 - 开发和运维，涉及到的有：
 - ASP.NET MVC（.NET 7+）、EFCore、LINQ
-- SQLite、MySQL、PolarDB、Appache Doris、SQLServer、Oracle、PostgreSQL、Dm、DuckDB、ClickHouse
+- SQLite、MySQL、SQLServer、Oracle、PostgreSQL、Dm
+- PolarDB、Appache Doris、DuckDB、ClickHouse
 - Linux（X64、ARM64）、nginx、acme.sh SSL、shell + Cron、Docker
 - ES6、webpack、Bootstrap、Shoelace、AG-Grid、Lit、Service workers (offline)
 - 监控主机、接口、端口、SSL证书、数据库
