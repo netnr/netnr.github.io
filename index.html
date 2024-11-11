@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="netnr,NET牛人" />
     <meta name="description" content="netnr,NET牛人,Netnr Project">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
     <title>netnr</title>
 
     <style id="style0">
@@ -39,7 +40,7 @@
     <!--main-->
     <div id="app"></div>
 
-    <link rel="stylesheet" href="static/docsify-better/docsify-better.css?202411" />
+    <link rel="stylesheet" href="static/docsify-better/docsify-better.css?20241111" />
 
     <script>
         window.$docsify = {
@@ -50,16 +51,7 @@
             loadSidebar: true,
             relativePath: true,
             routerMode: "history",
-            markdown: {
-                renderer: {
-                    code: function (str, lang) {
-                        let htm = hljs.getLanguage(lang)
-                            ? hljs.highlight(str, { language: lang }).value
-                            : hljs.highlightAuto(str).value;
-                        return `<pre><code>${htm}</code></pre>`;
-                    }
-                }
-            },
+            markdown: { renderer: { code: (code, language) => `<pre><code>${codeToHtml(code, language)}</code></pre>` } },
             plugins: [
                 function (hook) {
                     // 每次开始解析 Markdown 内容时调用
@@ -74,7 +66,7 @@
         }
     </script>
 
-    <script src="static/docsify-better/docsify-better.js?202411"></script>
+    <script src="static/docsify-better/docsify-better.js?20241111"></script>
 </body>
 
 </html>
