@@ -118,6 +118,9 @@ v5 版本全面重写，不兼容以前，调用方法更简单简洁
 调整 PublicUserResult 类属性字段为 OpenId（有值，应用唯一）、UnionId（可能有值，跨应用唯一）  
 新增 PublicUserResult 类方法 `GetId() => UnionId ?? OpenId;`
 
+#### next
+更新 支付宝签名 RSACryptoServiceProvider 改为 RSA ，消除 CA1416 提醒
+
 ### 使用
 v4 旧版本使用示例 `Netnr.Demo/Controllers/LoginController.cs`
 
