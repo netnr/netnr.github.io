@@ -3,14 +3,14 @@
 netnr@netnr.com  
 ASP.NET、SQL、JavaScript
 
-> ### 重庆主城寻找新的岗位（2024.08.09）
+> ### 2024.08.09 离职，正在寻找新的工作，重庆或远程办公
 
 ### 工作经历
 #### 重庆汉光
 时间：2018.08 ~ 2024.08  
 职位：全栈  
 - 开发和运维，涉及到的有：
-- ASP.NET MVC（.NET 7+）、EFCore、LINQ
+- ASP.NET MVC（.NET 6+）、EFCore、LINQ
 - SQLite、MySQL、SQLServer、Oracle、PostgreSQL、Dm
 - PolarDB、Appache Doris、DuckDB、ClickHouse
 - Linux（X64、ARM64）、nginx、acme.sh SSL、shell + Cron、Docker
