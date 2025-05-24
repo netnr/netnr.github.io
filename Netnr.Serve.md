@@ -1,6 +1,5 @@
 # NS (Netnr.Serve)
-简单的 HTTP 静态文件服务  
-Simple HTTP static file serving
+简单的 HTTP 服务，文件列表、下载、上传、删除，支持 mp4 分片播放
 
 ### Start (启动)
 启动逐个参数设置

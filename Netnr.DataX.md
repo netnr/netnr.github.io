@@ -1,6 +1,5 @@
 # NDX (Netnr.DataX)
-工具箱，数据库导入、导出、迁移，静默执行（配置后可定时任务）  
-Toolbox, database import, export, migration, silent execution (scheduled tasks can be configured after configuration)
+工具箱，数据库导入、导出、迁移，静默执行（配置后可定时任务）
 
 https://github.com/netnr/np/releases
 

@@ -27,7 +27,7 @@
 &nbsp; https://seep.eu.org/localhost
 
 **uuid**
-&nbsp; 一个基于 Git 托管去中心化的收藏夹，书签
+&nbsp; 基于 Git 托管的收藏夹/书签
 &nbsp; https://uu.zme.ink
 
 **ScriptService**
@@ -39,7 +39,7 @@
 &nbsp; Markdown 编辑器
 &nbsp; https://md.js.org
 
-**JSON Editor**
+**JSONEditor**
 &nbsp; JSON 编辑器
 &nbsp; https://je.js.org
 
