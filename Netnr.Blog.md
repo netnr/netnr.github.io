@@ -2,7 +2,8 @@
 个人站点
 
 > https://netnr.com  
-> https://netnr.zme.ink 镜像站点
+> https://netnr.zme.ink (备站)  
+> https://netnr.koyeb.app (备站)  
 
 ### 重大变更
 - 2024.12.04 网站改版，旧版本存档不在维护
