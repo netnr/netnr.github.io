@@ -4,7 +4,6 @@
 .NET、SQL、JavaScript
 
 
-### Site
 **GitHub**
 &nbsp; [github.com/netnr](https://github.com/netnr) 
 
@@ -16,7 +15,7 @@
 **ScriptService**
 &nbsp; 脚本服务
 &nbsp; https://ss.netnr.com (国内)
-&nbsp; https://ss.js.org (国外)
+&nbsp; https://ss.js.org
 
 **NetnrMD**
 &nbsp; Markdown 编辑器
