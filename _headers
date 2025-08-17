@@ -2,4 +2,4 @@
   Access-Control-Allow-Origin: *
 
 /static/docsify-better/docsify-better.js
-  Content-Type application/javascript; charset=utf-8
+  Content-Type: application/javascript; charset=utf-8
