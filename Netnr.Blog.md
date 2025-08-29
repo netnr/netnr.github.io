@@ -2,15 +2,14 @@
 个人站点
 
 > https://netnr.com  
-> https://netnr.zme.ink (备站)  
-> https://netnr.koyeb.app (备站)  
+> https://www.netnr.eu.org (备站)
 
 ### 重大变更
 - 2024.12.04 网站改版，旧版本存档不在维护
 - 访问链接从 https://www.netnr.com 改为 https://netnr.com ，旧链接会 301 自动跳转
 
 ### 框架组件
-- .NET （latest） + EF + Linq + Bootstrap + AG-Grid + shoelace-style
+- .NET + EFCore + LINQ + Bootstrap + AG-Grid + shoelace-style
 - 支持：SQLServer、MySQL、PostgreSQL、SQLite 等
 - ==================================
 - Hangfire（定时任务）

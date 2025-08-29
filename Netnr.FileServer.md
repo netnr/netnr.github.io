@@ -1,5 +1,6 @@
 # NFS (Netnr.FileServer)
-文件服务器，基于嵌入式数据库
+简单文件服务器，基于嵌入式数据库  
+Simple file server, based on embedded database
 
 `appsettings.json` 为配置文件，文件数据库 和 上传目录 赋予读写权限
 
