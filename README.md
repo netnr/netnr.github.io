@@ -17,14 +17,10 @@
 &nbsp; KMS 激活服务，slmgr 命令激活 Windows 系统、Office
 &nbsp; https://kms.zme.ink
 
-**Proxy**
+**CORS**
 &nbsp; 跨域请求
 &nbsp; https://seep.eu.org
 &nbsp; https://cors.eu.org
-
-**localhost**
-&nbsp; 支持 HTTPS (SSL) 和子域的 localhost
-&nbsp; https://seep.eu.org/localhost
 
 **uuid**
 &nbsp; 基于 Git 托管的收藏夹/书签
@@ -39,7 +35,7 @@
 &nbsp; Markdown 编辑器
 &nbsp; https://md.js.org
 
-**JSON Editor**
+**JSONEditor**
 &nbsp; JSON 编辑器
 &nbsp; https://je.js.org
 
