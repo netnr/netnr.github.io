@@ -33,7 +33,7 @@ Install-Package Netnr.Login
     <tr>
         <td><img src="https://gs.zme.ink/static/login/taobao.svg" height="30" title="淘宝"></td>
         <td><a target="_blank" href="https://open.taobao.com/doc.htm?docId=118&docType=1&spm=a219a.7395903.0.0.6a4239715JvKjW">参考文档</a></td>
-        <td><a target="_blank" href="https://console.open.taobao.com/">应用申请</a></td>
+        <td><a target="_blank" href="https://work.open.taobao.com/open-console-home/index">应用申请</a></td>
     </tr>
     <tr>
         <td><img src="https://gs.zme.ink/static/login/alipay.svg" height="30" title="支付宝/Alipay"></td>
