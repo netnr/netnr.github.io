@@ -4,7 +4,7 @@ Simple file server, based on embedded database
 
 `appsettings.json` 为配置文件，文件数据库 和 上传目录 赋予读写权限
 
-https://github.com/netnr/np/releases
+下载 https://github.com/netnr/np/releases
 
 ### 功能
 - [x] 获取 Token 授权操作（有效期内访问所有接口）

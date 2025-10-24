@@ -2,6 +2,8 @@
 简单的 HTTP 静态文件服务  
 Simple HTTP static file serving
 
+下载 https://github.com/netnr/np/releases
+
 ### Start (启动)
 启动逐个参数设置
 ```bat
@@ -48,15 +50,3 @@ curl http://localhost:7713/file.ext -X delete #删除
 
 iwr http://localhost:7713/file.ext -method delete #PowerShell
 ```
-
-### Release (发布)
-win-x64 NativeAOT 3.14M  
-https://r2.zme.ink/releases/ns-8.0.1-win-x64.exe
-
-linux-x64 NativeAOT 7M  
-https://r2.zme.ink/releases/ns-8.0.1-linux-x64.aot
-
-osx-x64 NativeAOT 5.25M  
-https://r2.zme.ink/releases/ns-8.0.1-osx-x64.aot
-
-建议下载后改名为 `ns` 再配一个环境变量，更方便使用  

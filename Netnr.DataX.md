@@ -2,7 +2,7 @@
 工具箱，数据库导入、导出、迁移，静默执行（配置后可定时任务）  
 Toolbox, database import, export, migration, silent execution (scheduled tasks can be configured after configuration)
 
-https://github.com/netnr/np/releases
+下载 https://github.com/netnr/np/releases
 
 ### Menu 菜单
 ```
@@ -24,6 +24,8 @@ https://github.com/netnr/np/releases
 [Data] Parameter Optimization (SQLite MySQL) 参数优化
 [Data] Execute SQL 执行 SQL
 [Data] Full Text Search 全文检索
+
+[Data] <etldump> ETL Dump ETL转存
 
 [Data] Generate CreateTable In ClickHouse 生成创建表
 [Data] Generate CreateTable In DuckDB 生成创建表

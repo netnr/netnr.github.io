@@ -21,7 +21,7 @@
 - Netnr.Login（第三方登录）
 
 ### 功能模块
-- 登录、注册（第三方直接登录：QQ、微博、GitHub、淘宝、Microsoft）
+- 登录、注册（第三方直接登录：QQ、GitHub、Microsoft）
 - Blog：发布文章（Markdown 编辑器）
 - Gist：代码片段
 - Run：在线运行 HTML 代码，写 demo 用
