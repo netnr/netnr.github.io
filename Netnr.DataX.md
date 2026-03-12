@@ -29,7 +29,7 @@ Toolbox, database import, export, migration, silent execution (scheduled tasks c
 
 [Data] Generate CreateTable In ClickHouse 生成创建表
 [Data] Generate CreateTable In DuckDB 生成创建表
-[Data] Generate CreateTable In Apache Doris 生成创建表
+[Data] Generate CreateTable In ApacheDoris 生成创建表
 
 [About] <version> View version 查看版本
 [About] Console encoding 控制台编码

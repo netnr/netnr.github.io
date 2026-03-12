@@ -3,7 +3,7 @@
 
 ### 使用 (Usage)
 ```csharp
-//（首次预编译耗时约 5 秒）
+//（首次预编译）
 
 var uap = new UAParsers(userAgent);
 

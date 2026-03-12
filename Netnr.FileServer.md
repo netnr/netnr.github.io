@@ -9,12 +9,10 @@ Simple file server, based on embedded database
 ### 功能
 - [x] 获取 Token 授权操作（有效期内访问所有接口）
 - [x] 创建 FixedToken 并配置允许访问的接口（永久有效访问授权的接口）
-- [x] 上传文件和分块上传文件
+- [x] 上传文件
 - [x] 复制已上传的文件
 - [x] 上传覆盖文件
 - [x] 删除文件
-- [x] 上传临时文件
-- [x] 清理临时文件
 
 ### 授权
 首先创建 App 得到 AppId 、AppKey，然后根据 AppId、AppKey 请求得到 Token，  
