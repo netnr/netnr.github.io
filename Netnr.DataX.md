@@ -72,7 +72,7 @@ Toolbox, database import, export, migration, silent execution (scheduled tasks c
 ```
 
 ### Q&A
-- `<xxx>` 代表支持静默运行，如 `ndx version`、`ndx tcping zme.ink`
+- `<xxx>` 代表支持静默运行，如 `ndx version`、`ndx tcping qq.com`
 - 支持 SQLite、MySQL、Oracle、SQLServer、PostgreSQL
 - 配置文件 ud/config.json，默认输出目录 ud/hub，日志输出目录 logs
 - 数据库连接信息 ConnectionRemark 为连接别名，作业连接引用，所以保持唯一

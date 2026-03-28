@@ -11,11 +11,12 @@
 **Blog**
 &nbsp; 个站
 &nbsp; https://netnr.com
+&nbsp; https://netnr.eu.org
 &nbsp; https://www.netnr.eu.org (备站)
 
 **KMS**
 &nbsp; KMS 激活服务，slmgr 命令激活 Windows 系统、Office
-&nbsp; https://kms.zme.ink
+&nbsp; https://kms.netnr.eu.org
 
 **CORS**
 &nbsp; 跨域请求
@@ -24,19 +25,22 @@
 
 **uuid**
 &nbsp; 基于 Git 托管的收藏夹/书签
-&nbsp; https://uu.zme.ink
+&nbsp; https://uu.netnr.eu.org
 
 **ScriptService**
 &nbsp; 脚本服务
-&nbsp; https://ss.js.org
+&nbsp; https://ss.netnr.eu.org
 &nbsp; https://ss.netnr.com
+&nbsp; https://ss.js.org
 
 **NetnrMD**
 &nbsp; Markdown 编辑器
+&nbsp; https://md.netnr.eu.org
 &nbsp; https://md.js.org
 
 **JSONEditor**
 &nbsp; JSON 编辑器
+&nbsp; https://je.netnr.eu.org
 &nbsp; https://je.js.org
 
 更多发布应用

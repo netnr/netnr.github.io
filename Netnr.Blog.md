@@ -2,6 +2,7 @@
 个人站点
 
 > https://netnr.com  
+> https://netnr.eu.org    
 > https://www.netnr.eu.org (备站)
 
 ### 重大变更
