@@ -311,6 +311,8 @@ OpenCover/
 .vscode
 .vercel
 .netlify
+.wrangler
+.dotnet-cli
 .editorconfig
 Netnr.Admin.Web/wwwroot/
 Netnr.DataKit/wwwroot/
@@ -325,3 +327,5 @@ ClientWeb/*/dist/
 *.wal
 *.position
 yarn.lock
+**/dotnet-tools.json
+/Netnr.Admin.Web/dotnet-tools.json
