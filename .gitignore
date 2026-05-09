@@ -305,6 +305,11 @@ __pycache__/
 OpenCover/
 
 # customer
+mnt/*
+!mnt/README.md
+Netnr.OCI/oci/*
+!Netnr.OCI/oci/args.jsonc
+!Netnr.OCI/oci/README.md
 .ignore
 .config
 .kiro
@@ -329,3 +334,4 @@ ClientWeb/*/dist/
 yarn.lock
 **/dotnet-tools.json
 /Netnr.Admin.Web/dotnet-tools.json
+
