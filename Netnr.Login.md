@@ -127,9 +127,9 @@ v5 版本全面重写，不兼容以前，调用方法更简单简洁
 修改 字段 PublicUserResult.`Intro` 为 `Bio`  
 
 ### 使用
-v4 旧版本使用示例 `Netnr.Demo/Controllers/LoginController.cs`
+v4 旧版本使用示例 `Netnr.Sample/Controllers/LoginController.cs`
 
-极简调用，详情参考 `Netnr.Demo/Controllers/AccountController.cs`
+极简调用，详情参考 `Netnr.Sample/Controllers/AccountController.cs`
 ```csharp
 // 初始化配置，推荐使用 LoginTo.InitConfig 方法读取配置
 

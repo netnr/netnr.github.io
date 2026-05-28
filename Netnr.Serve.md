@@ -1,4 +1,4 @@
-# NS (Netnr.Serve)
+# NServe (Netnr.Serve)
 简单的 HTTP 静态文件服务  
 Simple HTTP static file serving
 
@@ -8,7 +8,7 @@ Simple HTTP static file serving
 启动逐个参数设置
 ```bat
 --urls (default: http://*:7713/):
---root (default: D:/site): #根目录，默认命令行启动位置
+--root (default: .): #根目录，默认命令行启动位置
 --index (default: index.html):
 --404 (default: 404.html):
 --suffix (default: .html):

@@ -307,9 +307,7 @@ OpenCover/
 # customer
 mnt/*
 !mnt/README.md
-Netnr.OCI/oci/*
-!Netnr.OCI/oci/args.jsonc
-!Netnr.OCI/oci/README.md
+Netnr.OCI/oci/inst*
 .ignore
 .config
 .kiro
@@ -333,5 +331,3 @@ ClientWeb/*/dist/
 *.position
 yarn.lock
 **/dotnet-tools.json
-/Netnr.Admin.Web/dotnet-tools.json
-

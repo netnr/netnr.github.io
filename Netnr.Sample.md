@@ -1,7 +1,7 @@
-# Netnr.Demo
-示例、实践
+# Netnr.Sample
+样例、实践
 
-### GraphDemo
+### GraphSample
 跨平台的绘图使用，生成验证码，加水印，裁剪等
 
 - SkiaSharp 快，跨平台优势，推荐指数 ⭐⭐⭐⭐⭐ , Linux 需安装 fontconfig
@@ -11,5 +11,5 @@
 - Magick.NET 慢，推荐指数 ⭐
 - Microsoft.Maui.Graphics MAUI 抽象集成，推荐指数 ⭐⭐
 
-### LoginDemo
+### LoginSample
 Netnr.Login 登录示例代码

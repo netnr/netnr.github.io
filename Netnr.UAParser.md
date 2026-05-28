@@ -3,8 +3,6 @@
 
 ### 使用 (Usage)
 ```csharp
-//（首次预编译）
-
 var uap = new UAParsers(userAgent);
 
 var clientModel = uap.GetClient();
@@ -13,6 +11,10 @@ var osModel = uap.GetOS();
 var botModel = uap.GetBot();
 ```
 
+预编译性能翻一倍，但：多占约 80MB 内存，首次解析耗时约 10s
+// UAParsers.PreCompile();
+// var uap = new UAParsers(userAgent); // 首次解析耗时较长
+
 ### 附
 正则：<https://github.com/matomo-org/device-detector>  
-去除详细型号检测，包精简，轻依赖，预编译正则，速度快。
+去除详细型号检测，包精简，轻依赖，可预编译正则，速度快。

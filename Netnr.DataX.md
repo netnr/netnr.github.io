@@ -77,10 +77,10 @@ Toolbox, database import, export, migration, silent execution (scheduled tasks c
 - 配置文件 ud/config.json，默认输出目录 ud/hub，日志输出目录 logs
 - 数据库连接信息 ConnectionRemark 为连接别名，作业连接引用，所以保持唯一
 - 静默作业
-  - 参数配置参考 Works.Work_Demo 示例，建议保留示例新建作业
+  - 参数配置参考 Tasks.Task_Demo 示例，建议保留示例新建作业
   - 不在示例的方法不支持静默执行，作业名以 Work_ 开头
-  - 带参执行指定作业 `ndx work Work_Demo Work_2`，多个作业空格分隔
-  - 数据包参数 PackagePath 支持时间格式化 `{yyyyMMdd_HHmmss}`，`~` 指向 ud/hub 目录
+  - 带参执行指定作业 `ndx task Task_Demo Task_2`，多个作业空格分隔
+  - 数据包参数 PackagePath 支持时间格式化 `{yyyyMMdd_HHmmss}`
 - 读写数据
   - 读取表数据 ReadDataSQL 一般配置为 `select * from table`，如果表数据大内存不够，可以配置分页读取
   - 表名可带模式名，如 dbo.UserInfo、public.UserInfo 等

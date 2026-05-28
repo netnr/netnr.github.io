@@ -6,6 +6,5 @@
   - [Netnr.Blog](Netnr.Blog.md)
   - [Netnr.DataX](Netnr.DataX.md)
   - [Netnr.Serve](Netnr.Serve.md)
-  - [Netnr.FileServer](Netnr.FileServer.md)
 
 - [resume](resume.md)
