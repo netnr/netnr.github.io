@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/(.*\\.md)",
+            "destination": "/$1"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }
