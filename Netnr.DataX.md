@@ -6,35 +6,33 @@ Toolbox, database import, export, migration, silent execution (scheduled tasks c
 
 ### Menu 菜单
 ```
-[Data] <work> Work 作业, 以 Work 开头
+[Data] <task> Task 任务, 以 Task 开头
 
 [Data] Migrate Data 迁移数据
-
 [Data] Export Data 导出数据
+[Data] Export DDL 导出 DDL
 [Data] Import Data 导入数据
 [Data] Export Excel 导出 Excel
 [Data] Import Excel 导入 Excel
-
-[Data] Generate Table Mapping 生成 表映射(读=>写)
-[Data] Generate Column Mapping 生成 列映射(读=>写)
-[Data] Generate Table DDL 生成 DDL
+[Data] Full Text Search 全文检索
 
 [Data] <conntest> Connection Test 连接测试
 [Data] <connaes> Connection AES 连接字符串加密解密
 [Data] Parameter Optimization (SQLite MySQL) 参数优化
-[Data] Execute SQL 执行 SQL
-[Data] Full Text Search 全文检索
 
-[Data] <etldump> ETL Dump ETL转存
-
+[Data] Generate Table Mapping 生成 表映射(读=>写)
+[Data] Generate Column Mapping 生成 列映射(读=>写)
+[Data] Generate Table DDL 生成表 DDL
 [Data] Generate CreateTable In ClickHouse 生成创建表
 [Data] Generate CreateTable In DuckDB 生成创建表
 [Data] Generate CreateTable In ApacheDoris 生成创建表
 
+[Data] <etldump> ETL Dump ETL转存
+
 [About] <version> View version 查看版本
 [About] Console encoding 控制台编码
 [About] GC 清理
-[About] <basedir> Open Base Directory 打开根目录
+[About] <basedir> OpenAsync Base Directory 打开根目录
 
 [Network] <tcping> TCPing TCP 端口探测
 [Network] <tcpscan> TCP Scan TCP端口扫描（1-65535）
@@ -54,20 +52,18 @@ Toolbox, database import, export, migration, silent execution (scheduled tasks c
 
 [Tool] <sinfo> System Info 系统信息
 [Tool] <sming> System Monitor 系统监控
-[Tool] <hinfo> Hardware Info 硬件信息
 [Tool] <pinfo> Process Info 程序信息
 [Tool] <consume> Consume 消耗
 
-[Tool] <clearmemory> Clear Memory 清理内存（仅限 Windows）
 [Tool] <pipe> Pipeline 管道工具
 [Tool] <env> Environment variables 环境变量
 [Tool] <dotnetframework> .NET Framework 已安装的 .NET Framework
 [Tool] <uuid> Generate UUID 生成UUID
 [Tool] <snow> Generate Snowflake 雪花ID
+[Tool] <zz> Generate ZZ 生成站点PM
 [Tool] <tail> Tail 读取文件最新内容
 [Tool] <wget> Wget 下载文件
 [Tool] <textmining> Text Mining 文本挖掘
-[Tool] <ddel> deep delete 深度删除匹配的文件（夹）
 [Tool] <directorytime> Directory Time 修改文件（夹）时间
 ```
 
