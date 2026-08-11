@@ -307,18 +307,20 @@ OpenCover/
 # customer
 mnt/*
 !mnt/README.md
-Netnr.OCI/oci/inst*
+.arts
+.codeartsdoer
+.joycode
+.kiro
+.wrangler
 .ignore
 .config
-.kiro
 .vscode
 .vercel
 .netlify
-.wrangler
 .dotnet-cli
 .editorconfig
+Netnr.OCI/oci/inst*
 Netnr.Admin.Web/wwwroot/
-Netnr.DataKit/wwwroot/
 ClientWeb/*/dist/
 */.config/
 */logs/
