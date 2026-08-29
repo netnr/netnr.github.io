@@ -5,6 +5,5 @@
 - Application
   - [Netnr.Blog](Netnr.Blog.md)
   - [Netnr.DataX](Netnr.DataX.md)
-  - [Netnr.Serve](Netnr.Serve.md)
 
 - [resume](resume.md)

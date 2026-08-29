@@ -322,6 +322,7 @@ mnt/*
 Netnr.OCI/oci/inst*
 Netnr.Admin.Web/wwwroot/
 ClientWeb/*/dist/
+crossLang/*/dist/
 */.config/
 */logs/
 */p_assets/*.db
