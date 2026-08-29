@@ -5,10 +5,10 @@
 #
 #   平台                触发方式              SPA 回退机制
 #   ------------------  --------------------  ---------------------------------
-#   Cloudflare Pages    Git 集成（自动）       _redirects（与 Netlify 语法兼容）
+#   Cloudflare Pages    Git 集成（自动）       平台内置 SPA 回退
 #   Cloudflare Workers  Git 集成（自动）       wrangler.jsonc 的 not_found_handling
 #   Vercel              Git 集成（自动）       vercel.json 的 rewrites
-#   Netlify             Git 集成（自动）       _redirects（顺带支持）
+#   Netlify             Git 集成（自动）       netlify.toml 的 redirects
 #   GitHub Pages        本 workflow           CI 生成 404.html（GH Pages 只认物理文件）
 #   Surge               本 workflow           CI 生成 200.html（Surge 只认物理文件）
 #
@@ -17,7 +17,7 @@
 #   vercel.json     → 仅 Vercel
 #   wrangler.jsonc  → 仅 Cloudflare Workers（CF Pages 不读）
 #   _headers        → Netlify、Cloudflare Pages（Workers/Vercel/GH Pages/Surge 无效）
-#   _redirects      → Netlify、Cloudflare Pages（同上；由 .assetsignore 排除 Workers 静态资源）
+#   netlify.toml    → 仅 Netlify（SPA 回退）
 #   .nojekyll       → 仅 GitHub Pages（防止 Jekyll 丢弃 _sidebar.md 等下划线文件；
 #                     本 workflow 部署不经过 Jekyll，该文件仅为兼容分支部署保留）
 #   404.html        → CI 产物，勿提交（GH Pages 返回 404 状态码；Surge 作自定义 404 页）
@@ -25,7 +25,7 @@
 #
 # 【维护要点】
 #   - index.html 是唯一样板，404/200 均由 CI 复制生成，仓库不留副本
-#   - 修改 SPA/头部规则时：改 vercel.json、wrangler.jsonc、_redirects、_headers 四处
+#   - 修改 SPA/头部规则时：改 vercel.json、wrangler.jsonc、netlify.toml、_headers 四处
 #   - 勿在本地手动执行 surge 部署（产物缺 200.html，会覆盖 CI 版本导致回退失效）
 #
 # 【所需 Secrets】
