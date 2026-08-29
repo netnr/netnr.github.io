@@ -1,0 +1,69 @@
+# ============================================================================
+# 多平台部署说明（docsify SPA，routerMode: history，所有平台都需要回退到 index.html）
+#
+# 【平台 × 机制 矩阵】
+#
+#   平台                触发方式              SPA 回退机制
+#   ------------------  --------------------  ---------------------------------
+#   Cloudflare Pages    Git 集成（自动）       _redirects（与 Netlify 语法兼容）
+#   Cloudflare Workers  Git 集成（自动）       wrangler.jsonc 的 not_found_handling
+#   Vercel              Git 集成（自动）       vercel.json 的 rewrites
+#   Netlify             Git 集成（自动）       _redirects（顺带支持）
+#   GitHub Pages        本 workflow           CI 生成 404.html（GH Pages 只认物理文件）
+#   Surge               本 workflow           CI 生成 200.html（Surge 只认物理文件）
+#
+# 【仓库内平台文件归属】（非目标平台会无视，但整目录上架的平台会公开暴露这些文件）
+#
+#   vercel.json     → 仅 Vercel
+#   wrangler.jsonc  → 仅 Cloudflare Workers（CF Pages 不读；不作为静态资产上传）
+#   _headers        → Netlify、Cloudflare Pages（Workers/Vercel/GH Pages/Surge 无效）
+#   _redirects      → Netlify、Cloudflare Pages（同上）
+#   .nojekyll       → 仅 GitHub Pages（防止 Jekyll 丢弃 _sidebar.md 等下划线文件；
+#                     本 workflow 部署不经过 Jekyll，该文件仅为兼容分支部署保留）
+#   404.html        → CI 产物，勿提交（GH Pages 返回 404 状态码；Surge 作自定义 404 页）
+#   200.html        → CI 产物，勿提交（仅 Surge SPA 回退）
+#
+# 【维护要点】
+#   - index.html 是唯一样板，404/200 均由 CI 复制生成，仓库不留副本
+#   - 修改 SPA/头部规则时：改 vercel.json、wrangler.jsonc、_redirects、_headers 四处
+#   - 勿在本地手动执行 surge 部署（产物缺 200.html，会覆盖 CI 版本导致回退失效）
+#
+# 【所需 Secrets】
+#   SURGE_TOKEN  → surge job（本地执行 `surge token` 获取）
+#   GITHUB_TOKEN → 内置，无需配置
+# ============================================================================
+
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # GitHub Pages SPA 回退只认物理 404.html
+      - run: cp index.html 404.html
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+
+  surge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Surge SPA 回退只认物理 200.html
+      - run: cp index.html 200.html
+
+      - run: npx --yes surge ./ netnr.surge.sh --token ${{ secrets.SURGE_TOKEN }}
