@@ -1,0 +1,30 @@
+name: Create Firebase Hosting Site
+
+# 手动触发的一次性工具：用 service account 非交互式创建 Firebase Hosting 站点
+# 本地/控制台需要交互式 `firebase login`，CI 环境用 GOOGLE_APPLICATION_CREDENTIALS
+# 指向 service account JSON 即可免登录调用 firebase-tools
+on:
+  workflow_dispatch:
+    inputs:
+      site_id:
+        description: '要创建的 Hosting 站点 ID（决定 xxx.web.app 子域名）'
+        required: true
+        default: 'netnr'
+      project_id:
+        description: 'Firebase 项目 ID'
+        required: true
+        default: 'netnr-docs'
+
+jobs:
+  create-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Write service account credentials
+        env:
+          FIREBASE_SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NETNR_DOCS }}
+        run: echo "$FIREBASE_SA" > "$RUNNER_TEMP/firebase-sa.json"
+
+      - name: Create Hosting site
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-sa.json
+        run: npx --yes firebase-tools@latest hosting:sites:create ${{ inputs.site_id }} --project ${{ inputs.project_id }}
