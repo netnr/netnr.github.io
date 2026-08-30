@@ -1,4 +1,4 @@
-# Netnr
+## Netnr
 周华，男，1992.7 生，2012 参工，大专，single 🤣  
 ✉ netnr@netnr.com  
 .NET、SQL、JavaScript
@@ -70,6 +70,12 @@ https://netnr.github.io
 &nbsp; https://netnr.pages.dev
 &nbsp; https://netnr.vercel.app
 &nbsp; https://netnr.netlify.app
+
+https://netnr-ss.web.app
+&nbsp; https://netnr-ss.surge.sh
+&nbsp; https://netnr-ss.pages.dev
+&nbsp; https://netnr-ss.vercel.app
+&nbsp; https://netnr-ss.netlify.app
 
 https://netnr.koyeb.app
 &nbsp; https://netnr.alwaysdata.net
