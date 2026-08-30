@@ -305,8 +305,8 @@ __pycache__/
 OpenCover/
 
 # customer
-mnt/*
-!mnt/README.md
+/mnt/*
+!/mnt/README.md
 .arts
 .codeartsdoer
 .joycode

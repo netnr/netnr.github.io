@@ -63,3 +63,14 @@
 傲慢是一种得不到支持的尊严
 
 听从安排，保留意见
+
+### Deploy Matrix
+https://netnr.github.io
+&nbsp; https://netnr.surge.sh
+&nbsp; https://netnr.pages.dev
+&nbsp; https://netnr.vercel.app
+&nbsp; https://netnr.netlify.app
+
+https://netnr.koyeb.app
+&nbsp; https://netnr.alwaysdata.net
+&nbsp; https://nradmin.onrender.com
