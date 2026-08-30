@@ -1,4 +1,6 @@
 {
+    "buildCommand": "echo no-op build, bypasses Vercel default static-serving exclusion of README.md and package.json, see https://github.com/vercel/vercel/blob/main/packages/fs-detectors/src/detect-builders.ts",
+    "outputDirectory": ".",
     "rewrites": [
         {
             "source": "/(.*)",

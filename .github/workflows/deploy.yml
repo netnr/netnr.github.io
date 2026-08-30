@@ -14,7 +14,9 @@
 #
 # 【仓库内平台文件归属】（非目标平台会无视，但整目录上架的平台会公开暴露这些文件）
 #
-#   vercel.json     → 仅 Vercel
+#   vercel.json     → 仅 Vercel（额外配置 buildCommand + outputDirectory: "."，
+#                     绕开零配置静态部署对 README.md/package.json/.gitignore 等
+#                     文件的默认排除，使其原样出现在 Output 中）
 #   wrangler.jsonc  → 仅 Cloudflare Workers（CF Pages 不读）
 #   _headers        → Netlify、Cloudflare Pages（Workers/Vercel/GH Pages/Surge 无效）
 #   netlify.toml    → 仅 Netlify（SPA 回退）
