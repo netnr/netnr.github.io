@@ -66,6 +66,7 @@
 
 ### Deploy Matrix
 https://netnr.github.io
+&nbsp; https://netnr.web.app
 &nbsp; https://netnr.surge.sh
 &nbsp; https://netnr.pages.dev
 &nbsp; https://netnr.vercel.app

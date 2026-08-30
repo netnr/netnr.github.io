@@ -11,6 +11,7 @@
 #   Netlify             Git 集成（自动）       netlify.toml 的 redirects
 #   GitHub Pages        本 workflow           CI 生成 404.html（GH Pages 只认物理文件）
 #   Surge               本 workflow           CI 生成 200.html（Surge 只认物理文件）
+#   Firebase Hosting    本 workflow           firebase.json 的 rewrites
 #
 # 【仓库内平台文件归属】（非目标平台会无视，但整目录上架的平台会公开暴露这些文件）
 #
@@ -20,6 +21,7 @@
 #   wrangler.jsonc  → 仅 Cloudflare Workers（CF Pages 不读）
 #   _headers        → Netlify、Cloudflare Pages（Workers/Vercel/GH Pages/Surge 无效）
 #   netlify.toml    → 仅 Netlify（SPA 回退）
+#   firebase.json   → 仅 Firebase Hosting（site: netnr，对应 netnr.web.app 子域名）
 #   .nojekyll       → 仅 GitHub Pages（防止 Jekyll 丢弃 _sidebar.md 等下划线文件；
 #                     本 workflow 部署不经过 Jekyll，该文件仅为兼容分支部署保留）
 #   404.html        → CI 产物，勿提交（GH Pages 返回 404 状态码；Surge 作自定义 404 页）
@@ -27,12 +29,14 @@
 #
 # 【维护要点】
 #   - index.html 是唯一样板，404/200 均由 CI 复制生成，仓库不留副本
-#   - 修改 SPA/头部规则时：改 vercel.json、wrangler.jsonc、netlify.toml、_headers
+#   - 修改 SPA/头部规则时：改 vercel.json、wrangler.jsonc、netlify.toml、_headers、firebase.json
 #   - 勿在本地手动执行 surge 部署（产物缺 200.html，会覆盖 CI 版本导致回退失效）
 #
-# 【所需 Secrets】
-#   SURGE_TOKEN                     → surge job（本地执行 `surge token` 获取）
-#   GITHUB_TOKEN                    → 内置，无需配置
+# 【所需 Secrets】（本仓库 netnr.github.io 的 Secrets，非 npp 主仓库）
+#   SURGE_TOKEN                      → surge job（本地执行 `surge token` 获取）
+#   FIREBASE_SERVICE_ACCOUNT_NETNR   → firebase job（Firebase 控制台生成的服务账号 JSON，
+#                                      对应 netnr-docs 项目下的 netnr 站点）
+#   GITHUB_TOKEN                     → 内置，无需配置
 # ============================================================================
 
 name: Deploy
@@ -69,3 +73,15 @@ jobs:
       - run: cp index.html 200.html
 
       - run: npx --yes surge ./ netnr.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+
+  firebase:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NETNR_DOCS }}
+          projectId: netnr-docs
+          channelId: live
