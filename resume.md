@@ -3,8 +3,6 @@
 netnr@netnr.com  
 ASP.NET B/S、SQL、JavaScript
 
-> ### 2024.08.09 离职，寻全职、兼职，微信：`net-nr`
-
 ### 工作经历
 #### 重庆汉光
 时间：2018.08 ~ 2024.08  
