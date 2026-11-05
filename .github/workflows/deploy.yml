@@ -48,6 +48,12 @@ on:
 permissions:
   pages: write
   id-token: write
+  actions: write   # 重跑时要删掉上一轮留下的 github-pages 产物
+
+# 两次 Pages 部署叠在一起时后一次会卡在 updating_pages，排队等前一次结束
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   github-pages:
@@ -59,6 +65,20 @@ jobs:
       - run: cp index.html 404.html
 
       - uses: actions/configure-pages@v6
+
+      # 同一个 workflow run 重跑会保留上一轮的产物，deploy-pages@v5 见到两个同名 github-pages 直接报错
+      - name: Delete stale github-pages artifacts of this run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
+            --jq '.artifacts[] | select(.name == "github-pages") | .id' \
+          | while read -r id; do
+              if [ -n "$id" ]; then
+                gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$id"
+              fi
+            done
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: .
